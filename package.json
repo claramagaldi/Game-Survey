@@ -1,0 +1,25 @@
+{
+  "name": "claramagaldirodrigues_midtermtest_003_2021",
+  "version": "1.0.0",
+  "description": "Midterm",
+  "main": "server.js",
+  "author": "Clara Magaldi Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.8.8",
+    "morgan": "^1.3.0",
+    "compression": "^1.0.11",
+    "body-parser": "^1.8.0",
+    "method-override": "^2.2.0",
+    "express-session": "^1.7.6",
+    "ejs": "^1.0.0",
+    "mongoose": "~4.3.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  }
+}

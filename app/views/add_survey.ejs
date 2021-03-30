@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=title %>
+    </title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/add_survey" method="post">
+            <table>
+                <thead>
+                    <th>Survey ID</th>
+                    <th>Game Genre</th>
+                    <th>Days played per Year</th>
+                    <th>Age</th>
+                    <th>Enter Survey</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="surveyId" required="required" /></td>
+                        <td>
+                            <select name="gameGenre" required="required">
+                                <option selected="true" disabled="disabled">Choose an option</option>
+                                <option>Real-time strategy (RTS)</option>
+                                <option>Shooters (FPS and TPS)</option>
+                                <option>Multiplayer online battle arena (MOBA)</option>
+                                <option>Role-playing (RPG, ARPG, and More)</option>
+                                <option>Simulation and sports</option>
+                                <option>Puzzlers and party games</option>
+                                <option>Action-adventure</option>
+                                <option>Survival and horror</option>
+                                <option>Platformer</option>
+                                <option>Other</option>
+                            </select>
+                        </td>
+                        <td><input type="number" name="daysPerYear" required="required" /></td>
+                        <td><input type="number" name="age" required="required" /></td>
+                        <td><input class="button" type="submit" value="Add to Survey" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <p><a href="#">Home</a></p>
+    </div>
+</body>
+
+</html>

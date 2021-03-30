@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <th>Survey ID</th>
+                <th>Game Genre</th>
+                <th>Days played per Year</th>
+                <th>Age</th>
+                <th>Update the Survey</th>
+            </thead>
+            <tbody>
+                <% surveys.forEach(function(survey){ %>
+                    <form method="post" action="/list_surveys/<%= survey.surveyId %>?_method=PUT">
+                        <tr>
+                            <td>
+                                <input type="text" name="surveyId" value="<%= survey.surveyId %>" />
+                            </td>
+                            <td>
+                                <input type="text" name="gameGenre" value="<%= survey.gameGenre %>" />
+                            </td>
+                            <td>
+                                <input type="text" name="daysPerYear" value="<%= survey.daysPerYear %>" />
+                            </td>
+                            <td>
+                                <input type="text" name="age" value="<%= survey.age %>" />
+                            </td>
+                            <td>
+                                <input class="button" type="submit" value="Update Task" style="width: 200px" />
+                            </td>
+                        </tr>
+                    </form>
+                    <% })%>
+            </tbody>
+        </table>
+        <p><a href="#">Home</a></p>
+    </div>
+</body>
+
+</html>
